@@ -5,11 +5,7 @@ const Alphabet = require("./model/alphabet");
 const app = express();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://drag-drop-math.netlify.app",
-  })
-);
+app.use(cors());
 
 // Get all alphabet
 app.get("/alphabet", async (req, res) => {
